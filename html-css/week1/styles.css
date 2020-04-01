@@ -1,0 +1,69 @@
+body{
+    background-color: rgb(241, 232, 232);
+}
+.img-style{
+    margin-left: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius:50% ;
+}
+.name
+{
+    float:right;
+    margin-right: 300px;
+    margin-top: 80px;
+    text-align: center;
+    width: 500px;
+  height: 100px;
+  padding: 15px;
+  background-color:rgb(172, 107, 107);
+  box-shadow: 10px 10px 5px grey;
+    
+}
+.header{
+    color:rgb(146, 74, 74);
+    text-decoration: underline;
+}
+.p-style{
+    margin-left: 100px;
+    margin-top: 40px;
+   
+    display: inline-block;
+    font-size: large;
+    font-weight: bold;
+}
+.summery{
+    float:right;
+    margin-right: 200px;
+    white-space: pre;
+     display: inline-block;
+     font-size: large;
+     font-weight: bold;
+}
+
+.education{
+    margin-left: 100px;
+     
+    font-weight: bold;
+    font-size: large;
+    margin-top: 100px;
+}
+.experience{
+    
+    text-align: justify;
+    margin-top: 100px;
+    font-size: large;
+    font-weight: bold;
+    margin-left: 100px;
+}
+.footer{
+    font-size: smaller;
+margin-left: 100px;
+margin-top: 50px;
+
+border: 0px solid;
+width: 200px;
+height: 50px;
+padding: 10px;
+  box-shadow: 5px 10px 10px rgb(17, 2, 2) inset;}
+  
