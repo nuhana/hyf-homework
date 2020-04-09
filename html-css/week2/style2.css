@@ -193,18 +193,28 @@ nav img{
 }
     @media screen and (max-width :600px)
     {
+        .header{
+            padding-left: 0px;
+            padding-right: 80px;
+        }
         
         .details{
-            text-align: left;
+            text-align: center;
             width: 100%;
+            font-size: 16px;
+            padding: 0;
         }
         .nav-bar {
             flex-direction: column;
-            margin: 5px;
+            padding-inline-start: 0;
             text-align: left;
+            margin-left: 0;
+            padding: 10px;
         }
+        
         .nav-bar > li{
             margin: 5px;
+            
         }
         .pa{
             flex-direction: column-reverse;
@@ -212,27 +222,32 @@ nav img{
            text-align: left;
         }
         .pa > ul{
-            margin-left: 0;
-            margin:0px;
-            width: 80%;
+           margin-left: 0;
+            width: 90%;
+            padding: 10px;
         }
         .galery{
           flex-direction: column;
            margin-top: 0;
-           text-align: left;
+           text-align:left ;
         }
         .galery > ul{
-             margin-left: 0;
-            width: 70%;
-            
+            margin-left: 0;
+            width: 90%;
+            padding: 10px;
+        }
+        .logo{
+            width:70%;
+           margin-left: 50px;
         }
        .footer{
         flex-direction: column;
         text-align: left;
+        padding: 0;
        }
        .footer > ul{
         width: 75%;
-        
         margin-left: 0;
+        padding-left: 10px;
        }
     }
