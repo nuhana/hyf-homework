@@ -1,0 +1,235 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+    
+}
+.header{
+    background-color: rgb(240, 247, 246);
+    width: 100%;
+    padding: 30px;
+}
+.details{
+    margin-left: 10%;
+    padding: 10px;
+}
+.nav-bar{
+    flex-direction: row;
+    flex-grow: 1;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+.nav-bar > li{
+    display: inline;
+    padding-right: 40px;
+    list-style-type: none;
+    margin-left: 20px;
+}
+.h{
+    font-size: x-large;
+    font-stretch: extra-expanded;
+    font-weight: bold;
+}
+.s{
+    color: grey;
+}
+.silver{
+    color: gray;
+    padding: 5px;
+}
+.imge{
+width: 100%;
+}
+nav img{
+    width: 100%;
+}
+.pa{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 50px;
+    
+}
+.pa > ul{
+    display: inline;
+    padding: 30px;
+    margin-left: 10%;
+    width: 30%;
+    list-style-type: none;
+}
+.title{
+    font-weight: bold;
+    font-size:x-large;
+    padding: 10px;
+}
+.galery{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.galery > ul{
+    display: inline;
+    margin-left: 8%;
+    width: 35%;
+    list-style-type: none;
+}
+.logo{
+    display: flex;  
+    flex-direction: row;
+    flex-grow: 1;
+    margin-bottom: 60px;
+    flex-wrap:wrap;
+    }
+.logo1{
+    background-size:contain;
+    width: 50px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+    .logo2{
+    
+    background-size:contain;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.logo3{
+   
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.logo4{
+    
+    background-size:contain;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.logo5{
+    
+    background-size:contain;
+    width: 100px;
+    height: 100px;
+}
+.logo6{
+    
+    background-size:contain;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+ .logo7{
+    
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+}
+    .logo8{
+    
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    margin: 5px;
+}
+    .logo9{
+   
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+    .logo10{
+    
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+    .logo11{
+    
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+    .logo12{
+    
+    background-size:contain;
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+.footer{
+        background-color: rgb(86, 51, 167);
+        width: 100%;
+        color: white;
+        display: flex;
+        padding: 50px;
+        flex-direction: row;
+    }
+    .footer > ul{
+        display: inline;
+        margin-left: 5%;
+        width: 15%; 
+        list-style-type: none;
+}
+.map{
+    width: 100px;
+    height: 100px;
+}
+.footer-ul > li{
+    padding: 10px;
+}
+.border{
+    border-bottom: 1px solid rgb(106, 100, 163);
+}
+    @media screen and (max-width :600px)
+    {
+        .details{
+            text-align: left;
+            width: 100%;
+        }
+        .nav-bar {
+            flex-direction: column;
+            margin: 5px;
+            text-align: center;
+        }
+        .nav-bar > li{
+            margin: 5px;
+        }
+        .pa{
+            flex-direction: column-reverse;
+            margin: 0;
+           text-align: left;
+        }
+        .pa > ul{
+            margin-left: 0;
+            margin:0px;
+            width: 80%;
+        }
+        .galery{
+          flex-direction: column;
+           margin-top: 0;
+           text-align: left;
+        }
+        .galery > ul{
+             margin-left: 0;
+            width: 80%;
+        }
+       .footer{
+        flex-direction: column;
+       }
+       .footer > ul{
+        width: 75%;
+        text-align: left;
+        margin-left: 0;
+       }
+    }
