@@ -193,6 +193,7 @@ nav img{
 }
     @media screen and (max-width :600px)
     {
+        
         .details{
             text-align: left;
             width: 100%;
@@ -200,7 +201,7 @@ nav img{
         .nav-bar {
             flex-direction: column;
             margin: 5px;
-            text-align: center;
+            text-align: left;
         }
         .nav-bar > li{
             margin: 5px;
@@ -227,10 +228,11 @@ nav img{
         }
        .footer{
         flex-direction: column;
+        text-align: left;
        }
        .footer > ul{
         width: 75%;
-        text-align: left;
+        
         margin-left: 0;
        }
     }
