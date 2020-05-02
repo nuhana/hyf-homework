@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>web page</title>
+<link rel="stylesheet" type="text/css" href="wireframe.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav>
+<img src="logo.jpg" alt="logo">
+<ul>
+<li><a href="#">HOME</a></li> 
+<li><a href="#">ABOUT US</a></li> 
+<li><a href="#">FAQ</a></li> 
+</ul></nav>
+
+<section class="first-section">
+<h1>Sign up to <a href="#">yourcustomtailor.com</a></h1>
+</section>
+<form action="wireframe3.html" 
+method="GET">
+<h2>Step 2/4 -  how can we reach you?</h2>
+
+<div class="container">
+    <ul class="progress-bar">
+        <li class="active a">step 1</li>
+        <li class="active ">step 2</li>
+        <li>step 3</li>
+        <li>step 4</li>
+    </ul>
+</div>
+
+<p>We will probably need to stay in touch somehow. Let is know how we can reach you?</p>
+
+<label for="email">email *</label>
+<input type="email" name="email" id="email" 
+required>
+
+<label for="phone">phone *</label>
+<input type="tel" name="phone" id="phone"><br>
+
+<label for="password">password *</label>
+<input type="password" name="password" id="password" 
+pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}"
+title="min 10 characters uppercase,lowercase letters"
+ minlength="10" required ><br>
+
+<label for="Re-enter-Password">Re-enter Password *</label>
+<input type="password" name="Re-enter-Password" id="Re-enter-Password"
+required pattern="(?=.*[a-z])(?=.*[A-Z]).{10,}">
+
+<p>I want to sign up for the newsletter</p>
+<label for="Weekly-news" title="only one must be selected" >Weekly news *</label>
+<input type="radio" name="news" id="Weekly-news"required>
+<label for="Monthly-news">Monthly news *</label>
+<input type="radio" name="news" id="Monthly-news" required>
+<label for="Don't-send-me-news">Don't send me news *</label>
+<input type="radio" name="news" id="Don't-send-me-news" required><br><br>
+
+<button type="submit" value="next-step">
+    <a class="next-step" href="wireframe3.html">next step</a></button>
+</form>
+</body>
+</html>
