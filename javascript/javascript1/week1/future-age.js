@@ -1,6 +1,6 @@
-let yearOfBirth=1990;
-let yearFuture=2045;
+const yearOfBirth = 1990;
+const yearFuture = 2045;
 
-let age=yearFuture-yearOfBirth;
+const age = yearFuture - yearOfBirth;
 
-console.log("you will be " + age +" "+"in "+ yearFuture);
+console.log("you will be " + age + " " + "in " + yearFuture);
