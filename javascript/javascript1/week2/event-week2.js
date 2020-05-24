@@ -1,5 +1,5 @@
 function event(weekDay) {
-  const myArr = [
+  const weekDays = [
     "sunday",
     "monday",
     "tuesday",
@@ -10,9 +10,9 @@ function event(weekDay) {
   ];
   // the system give random day
   const randomNumber = Math.floor(Math.random() * 7) + 0;
-  today = myArr[randomNumber];
+  today = weekDays[randomNumber];
   // calculate the date of the event
-  let getEventWeekday = myArr[(randomNumber + weekDay) % 7];
+  let getEventWeekday = weekDays[(randomNumber + weekDay) % 7];
   console.log("todays weekday a " + today);
   return getEventWeekday;
 }

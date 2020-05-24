@@ -17,7 +17,6 @@ function addStudentToClass(studentName) {
   class07Students.push(studentName);
   return;
 }
-
 function getNumberOfStudents() {
   return class07Students.length;
 }
