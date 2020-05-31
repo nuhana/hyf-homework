@@ -32,6 +32,5 @@ function logOutSeriesText() {
     );
     total++;
   }
-  return;
 }
 logOutSeriesText(); // logs out the text

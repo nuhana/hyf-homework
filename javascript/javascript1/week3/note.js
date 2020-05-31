@@ -1,8 +1,6 @@
 const notes = [];
 function saveNote(content, id) {
-  let obj = { content, id };
-  notes.push(obj);
-  return;
+  notes.push({ content, id });
 }
 saveNote("Pick up groceries", 1);
 saveNote("Do laundry", 2);
@@ -13,13 +11,12 @@ function getNote(id) {
 
   for (let i = 0; i < notes.length; i++) {
     if (notes[i].id == id) {
-      let m = notes[i].content;
-      return m;
+      return notes[i];
     }
   }
-  return "error";
+  return console.error("note not found!");
 }
-const firstNote = getNote(1);
+const firstNote = getNote(3);
 console.log(firstNote); // {content: 'Pick up groceries', id: 1}
 
 function logOutNotesFormatted() {
