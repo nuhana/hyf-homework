@@ -1,11 +1,20 @@
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"]; // returns 'ø'
-function findShortest(d) {
-  return d.reduce(function (prevWord, currWord) {
-    if (currWord.length < prevWord.length) {
-      console.log(currWord);
-      return currWord;
-    } else return prevWord;
-  });
-}
+function findShortest(danishWords) {
+  let shortLength = Infinity;
+  let shortest = "";
 
-findShortest(danishWords); // returns 'ø'
+  if (danishWords.length > 0) {
+    for (let i = 0; i < danishWords.length; i++) {
+      if (
+        typeof danishWords[i] === "string" &&
+        danishWords[i].length < shortLength
+      ) {
+        shortest = danishWords[i];
+        shortLength = danishWords[i].length;
+      }
+    }
+  }
+
+  return shortest;
+}
+console.log(findShortest(danishWords));
