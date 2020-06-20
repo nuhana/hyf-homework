@@ -1,5 +1,11 @@
 const movies = [
-  { title: "'71", year: 2014, rating: 7.2, votes: 41702, running_times: 5940 },
+  {
+    title: "'71",
+    year: 2014,
+    rating: 7.2,
+    votes: 41702,
+    running_times: 5940,
+  },
   {
     title: "'A' gai wak",
     year: 1983,
@@ -8,7 +14,7 @@ const movies = [
     running_times: 6300,
   },
   {
-    title: "'Surfer' Morant",
+    title: "'Surfer' Morant ",
     year: 1980,
     rating: 7.9,
     votes: 10702,
@@ -49,7 +55,13 @@ const movies = [
     votes: 25408,
     running_times: 7140,
   },
-  { title: "10", year: 1979, rating: 6, votes: 13152, running_times: 7320 },
+  {
+    title: "10",
+    year: 1979,
+    rating: 6,
+    votes: 13152,
+    running_times: 7320,
+  },
   {
     title: "10 Cloverfield Lane",
     year: 2016,
@@ -72,7 +84,13 @@ const movies = [
     votes: 228033,
     running_times: 6000,
   },
-  { title: "2:22", year: 2017, rating: 5.7, votes: 10266, running_times: 5880 },
+  {
+    title: "2:22",
+    year: 2017,
+    rating: 5.7,
+    votes: 10266,
+    running_times: 5880,
+  },
   {
     title: "The three men and the pistol",
     year: 2014,
@@ -109,7 +127,13 @@ const movies = [
     votes: 64777,
     running_times: 5760,
   },
-  { title: "42", year: 2013, rating: 7.5, votes: 71968, running_times: 7680 },
+  {
+    title: "42",
+    year: 2013,
+    rating: 7.5,
+    votes: 71968,
+    running_times: 7680,
+  },
   {
     title: "45 Alien",
     year: 2015,
@@ -139,33 +163,41 @@ console.log("movies with a long title are :");
 console.log(longeTitle);
 
 //task 3
-const moviesNumber = movies.filter(
+const moviesMadeBetween = movies.filter(
   (movie) => movie.year >= 1980 && movie.year <= 1989
 ).length;
 console.log("number of movies made between 1980-1989 are :");
-console.log(moviesNumber);
+console.log(moviesMadeBetween);
 
 //task 4
-const addKeyTag = movies.filter((movie) => {
+const moviesWithTag = movies.filter((movie) => {
   if (movie.rating >= 7) return (movie.tag = "Good");
   if (movie.rating >= 4 && movie.rating < 7) return (movie.tag = "Average");
   if (movie.rating < 4) return (movie.tag = "Bad");
 });
-console.log(addKeyTag);
+console.log(moviesWithTag);
 
 //task 5
 const getRating = movies
   .filter((movie) => movie.rating > 6)
-  .map((movie) => "movies has rating more than 6 are :" + movie.rating);
+  .map(
+    (movie) =>
+      `movies has rating more than 6 are :` +
+      movie.title +
+      " with rating " +
+      movie.rating
+  );
 console.log(getRating);
 
 //task 6
 let count = 0;
 const getMoviesKeyword = movies.filter((movie) => {
+  const movieArray = movie.title.toLowerCase().split(" ");
+
   if (
-    movie.title.toLowerCase().includes("surfer") ||
-    movie.title.toLowerCase().includes("alien") ||
-    movie.title.toLowerCase().includes("Benjamin")
+    movieArray.includes("surfer") ||
+    movieArray.includes("alien") ||
+    movieArray.includes("Benjamin")
   ) {
     count++;
     return count;
@@ -182,11 +214,7 @@ const getDuplicateWord = movies.filter((movie) => {
 console.log(getDuplicateWord);
 
 //task 8
-const ratingLength = movies.filter((movies) => {
-  return movies.rating;
-});
-var avgRating =
-  movies.reduce((sum, movies) => {
-    return sum + movies.rating;
-  }, 0) / ratingLength.length;
+const avgRating = movies
+  .reduce((sum, movie) => sum + movie.rating / movies.length, 0)
+  .toFixed(2);
 console.log(avgRating);
