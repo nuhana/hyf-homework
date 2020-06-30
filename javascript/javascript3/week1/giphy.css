@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+img {
+  margin-top: 5rem;
+  margin-left: 30rem;
+  border: 1px 1px black;
+  display: block;
+  width: 30rem;
+}
+button {
+  background-color: coral;
+  margin: 10px;
+  border: coral;
+  color: antiquewhite;
+  width: 4rem;
+  height: 2rem;
+}
