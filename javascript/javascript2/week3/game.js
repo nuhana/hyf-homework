@@ -4,21 +4,15 @@ const lCounter = document.getElementById("press-l-counter");
 
 button.addEventListener("click", () => {
   const input = document.querySelector("input").value;
-  document.addEventListener("keydown", getKey);
+  document.addEventListener("keypress", getKey);
   //take the input as timer
   setTimeout(() => {
     if (countS > countL) {
       alert("player s win");
-      countS = 0;
-      countL = 0;
-      sCounter.innerHTML = " ";
-      lCounter.innerHTML = " ";
+      resetGame();
     } else if (countS < countL) {
       alert("player l win");
-      countS = 0;
-      countL = 0;
-      sCounter.innerHTML = " ";
-      lCounter.innerHTML = " ";
+      resetGame();
     } else {
       alert("no winner ");
     }
@@ -36,7 +30,6 @@ button.addEventListener("click", () => {
     }
   }, 1000);
 });
-
 let countS = 0;
 let countL = 0;
 function getKey(event) {
@@ -48,4 +41,10 @@ function getKey(event) {
     countL++;
     lCounter.innerHTML = countL;
   }
+}
+function resetGame() {
+  countS = 0;
+  countL = 0;
+  sCounter.innerHTML = " ";
+  lCounter.innerHTML = " ";
 }
