@@ -1,0 +1,19 @@
+body {
+  font-size: 2rem;
+}
+
+header {
+  text-align: center;
+}
+#press-l-section {
+  text-align: left;
+
+  display: inline-block;
+  margin-left: 400px;
+}
+
+#press-s-section {
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 300px;
+}
