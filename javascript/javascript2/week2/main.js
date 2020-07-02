@@ -4,28 +4,41 @@ const products = getAvailableProducts();
 const productsUl = document.querySelector("section.products ul");
 console.log(productsUl);
 
-////
-const input = document.getElementById("searchBar");
-input.addEventListener("keyup", () => {
-  let input = document.getElementById("searchBar").value.toLowerCase();
+let productNameInput = document.getElementById("searchBar");
+let maxValueInput = document.getElementById("max-price");
+productNameInput.addEventListener("keyup", () => {
+  let productName = document.getElementById("searchBar").value.toLowerCase();
+  let maxValue = document.getElementById("max-price").value;
   const filteredValue = products.filter((product) => {
-    return product.name.toLowerCase().includes(input);
+    if (product.price === "") {
+      if (
+        product.name.toLowerCase().includes(productName) &&
+        product.price < maxValue
+      ) {
+        return product;
+      }
+    } else {
+      return product.name.toLowerCase().includes(productName);
+    }
   });
   productsUl.innerHTML = " ";
   renderProducts(filteredValue);
 });
-/////
-renderProducts(products);
-const input1 = document.getElementById("max-price");
-input1.addEventListener("keyup", () => {
+maxValueInput.addEventListener("keyup", () => {
+  let productName = document.getElementById("searchBar").value.toLowerCase();
   let maxValue = document.getElementById("max-price").value;
-  const filteredPrice = products.filter((product) => {
-    return product.price < maxValue;
+  const filteredValue = products.filter((product) => {
+    if (
+      product.name.toLowerCase().includes(productName) &&
+      product.price < maxValue
+    ) {
+      return product;
+    }
   });
   productsUl.innerHTML = " ";
-  renderProducts(filteredPrice);
+  renderProducts(filteredValue);
 });
-/////
+
 function renderProducts(products) {
   products.forEach((product) => {
     const li = document.createElement("li");
