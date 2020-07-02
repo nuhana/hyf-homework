@@ -1,30 +1,36 @@
 const cityButton = document.getElementById("city-name");
 
 cityButton.addEventListener("click", () => {
-  let url =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
-    document.querySelector("input").value +
-    "&appid=4fdf58b7e131574d042a604479aa86ab" +
-    "&units=metric";
-  fetch(url)
-    .then((response) => response.json())
-    .then((weather) => {
-      const img = document.createElement("img");
-      img.src =
-        "http://openweathermap.org/img/wn/" +
-        weather.weather[0].icon +
-        "@2x.png";
-      document.body.appendChild(img);
-      const h1 = document.createElement("h1");
-      h1.innerHTML = `  ${weather.name}<br>
+  let cityName = document.querySelector("input").value;
+  if (cityName != "" && cityName != null) {
+    let url =
+      "http://api.openweathermap.org/data/2.5/weather?q=" +
+      cityName +
+      "&appid=4fdf58b7e131574d042a604479aa86ab" +
+      "&units=metric";
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((weather) => {
+        const img = document.createElement("img");
+        img.src =
+          "http://openweathermap.org/img/wn/" +
+          weather.weather[0].icon +
+          "@2x.png";
+        document.body.appendChild(img);
+        const h1 = document.createElement("h1");
+        h1.innerHTML = `  ${weather.name}<br>
       Temperature    : ${weather.main.temp}<br>
       Wind speed     : ${weather.wind.speed}<br>
       weather clouds : ${weather.weather[0].description}<br>
       city sunrise   : ${weather.sys.sunrise}<br>
       city sunset    : ${weather.sys.sunset}`;
 
-      document.body.appendChild(h1);
-    });
+        document.body.appendChild(h1);
+      });
+  } else {
+    alert("enter the city name");
+  }
 });
 
 //Use user current position
@@ -33,8 +39,8 @@ const locationButton = document.getElementById("location");
 locationButton.addEventListener("click", () => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
-      latiTude = position.coords.latitude;
-      longiTude = position.coords.longitude;
+      let latiTude = position.coords.latitude;
+      let longiTude = position.coords.longitude;
       let url2 =
         "http://api.openweathermap.org/data/2.5/weather?lat=" +
         latiTude +
