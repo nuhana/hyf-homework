@@ -1,0 +1,35 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f9fbfd;
+}
+#header {
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin-bottom: 5;
+}
+body {
+  box-shadow: 1px 1px 4px rgb(92, 36, 47);
+  width: 45%;
+  height: 45%;
+  margin-left: 25%;
+  margin-top: 10%;
+}
+#body {
+  margin-left: 10%;
+}
+td {
+  padding-left: 9em;
+}
+th {
+  padding-left: 8em;
+}
+#price {
+  padding-left: 5em;
+}
