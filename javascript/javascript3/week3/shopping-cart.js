@@ -31,11 +31,11 @@ class ShoppingCart {
     );
   }
   getTotal() {
-    this.total = 0;
+    let total = 0;
     for (let i = 0; i < this.products.length; i++) {
-      this.total = this.total + this.products[i].price;
+      total = total + this.products[i].price;
     }
-    return this.total;
+    return total;
   }
   renderProducts() {
     const t = document.getElementById("products");
