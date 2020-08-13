@@ -12,8 +12,13 @@ id int primary key,
 total_price int );
 
 create table order_lines(
+id int primary key,
+number_of_products int,
+  price int ,
+  total int,
 orders_id int primary key,
 product_id int primary key
+ 
 );
 create table product(
 id int primary key,
