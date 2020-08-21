@@ -98,12 +98,12 @@ select * from meals
 where price <=100;
 
 -- Get meals that still has available reservations
-select *
+select *,  sum(reservations.number_of_guests)
 from meals
  join reservations on meals.id=reservations.meal_id
-where meals.max_reservations > reservations.number_of_guests
-and reservation_date='2018-06-20'
-group by meals.id;
+ where reservation_date='2018-06-20'
+ group by meals.id
+having meals.max_reservations > sum(reservations.number_of_guests);
 
 -- Get meals that partially match a title. Rød grød med will match the meal with the title Rød grød med fløde
 select * from meals
