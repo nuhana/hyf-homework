@@ -9,11 +9,11 @@ app.get("/", async (request, response) => {
 const mealsRouter = require("./routes/meals.js");
 app.use("/meals", mealsRouter);
 //2
-const cheap_meal_router = require("./routes/cheap_meals.js");
-app.use("/cheap_meals", cheap_meal_router);
+const cheap_meal_router = require("./routes/cheap-meals.js");
+app.use("/cheap-meals", cheap_meal_router);
 //3
 const large_meals_router = require("./routes/large-meals.js");
-app.use("/large_meals", large_meals_router);
+app.use("/large-meals", large_meals_router);
 //4
 const mealRouter = require("./routes/meal.js");
 app.use("/meal", mealRouter);
