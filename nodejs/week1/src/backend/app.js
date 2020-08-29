@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 app.get("/", async (request, response) => {
-  response.status(400).send("there is no route");
+  response.send("Meal Sharing Web App");
 });
 
 //1
