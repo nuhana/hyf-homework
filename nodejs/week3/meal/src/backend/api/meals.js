@@ -141,6 +141,23 @@ const getLimit = async limit => {
     console.log(error);
   }
 };
+///availableReservations
+const getAvailableReservations = async availableReservations => {
+  if (availableReservations === "true") {
+    try {
+      return await knex("meals")
+        .select("meals.*")
+        .count("reservations.id as count")
+        .leftJoin("reservations", "meals.id", "=", "reservations.mealId")
+        .groupBy("meals.id")
+        .having("meals.maxNumberOfGuests", ">", "count");
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    response.status(400).send("Bad request").end();
+  }
+};
 
 router.get("/", async (request, response) => {
   if (request.query.maxPrice) {
@@ -174,6 +191,14 @@ router.get("/", async (request, response) => {
         response.status(400).send("Bad request").end();
         console.log(ex);
       });
+    if (request.query.availableReservations) {
+      getAvailableReservations(request.query.availableReservations)
+        .then(result => response.json(result))
+        .catch(ex => {
+          response.status(400).send("Bad request").end();
+          console.log(ex);
+        });
+    }
   }
   try {
     const allMEALS = await knex("meals").select("*");
