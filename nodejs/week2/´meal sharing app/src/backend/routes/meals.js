@@ -22,23 +22,21 @@ router.get("/", async (request, response) => {
     } else {
       response.status(400).json("no meals with this title");
     }
-  }
-  if (request.query.maxPrice) {
-    meals.filter(meal => meal.price <= request.query.maxPrice);
-  }
-  if (request.query.createdAfter) {
+  } else if (request.query.maxPrice) {
+    response.send(meals.filter(meal => meal.price <= request.query.maxPrice));
+  } else if (request.query.createdAfter) {
     response.send(
       meals.filter(meal => meal.createdAt > request.query.createdAfter)
     );
-  }
-  if (request.query.limit) {
+  } else if (request.query.limit) {
     let limitedMeals = [];
     for (let i = 0; i < request.query.limit; i++) {
       limitedMeals.push(meals[i]);
     }
     response.send(limitedMeals);
+  } else {
+    response.json(meals);
   }
-  response.json(meals);
 });
 
 module.exports = router;
