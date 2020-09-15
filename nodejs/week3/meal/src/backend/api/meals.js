@@ -167,44 +167,41 @@ router.get("/", async (request, response) => {
         response.status(400).send("Bad request").end();
         console.log(ex);
       });
-  }
-  if (request.query.title) {
+  } else if (request.query.title) {
     getTitle(request.query.title)
       .then(result => response.json(result))
       .catch(ex => {
         response.status(400).send("Bad request").end();
         console.log(ex);
       });
-  }
-  if (request.query.createdAfter) {
+  } else if (request.query.createdAfter) {
     getCreatedAfter(request.query.createdAfter)
       .then(result => response.json(result))
       .catch(ex => {
         response.status(400).send("Bad request").end();
         console.log(ex);
       });
-  }
-  if (request.query.limit) {
+  } else if (request.query.limit) {
     getLimit(request.query.limit)
       .then(result => response.json(result))
       .catch(ex => {
         response.status(400).send("Bad request").end();
         console.log(ex);
       });
-    if (request.query.availableReservations) {
-      getAvailableReservations(request.query.availableReservations)
-        .then(result => response.json(result))
-        .catch(ex => {
-          response.status(400).send("Bad request").end();
-          console.log(ex);
-        });
+  } else if (request.query.availableReservations) {
+    getAvailableReservations(request.query.availableReservations)
+      .then(result => response.json(result))
+      .catch(ex => {
+        response.status(400).send("Bad request").end();
+        console.log(ex);
+      });
+  } else {
+    try {
+      const allMEALS = await knex("meals").select("*");
+      response.json(allMEALS);
+    } catch (error) {
+      throw error;
     }
-  }
-  try {
-    const allMEALS = await knex("meals").select("*");
-    response.json(allMEALS);
-  } catch (error) {
-    throw error;
   }
 });
 module.exports = router;
