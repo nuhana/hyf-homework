@@ -150,7 +150,9 @@ const getAvailableReservations = async availableReservations => {
         .count("reservations.id as count")
         .leftJoin("reservations", "meals.id", "=", "reservations.mealId")
         .groupBy("meals.id")
-        .having("meals.maxNumberOfGuests", ">", "count");
+        .having(
+          knex.raw("meals.maxNumberOfGuests > count(reservations.mealId)")
+        );
     } catch (error) {
       console.log(error);
     }
