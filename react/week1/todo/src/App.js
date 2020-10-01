@@ -1,15 +1,6 @@
 import React from "react";
 import "./App.css";
 
-const TodoList = props => {
-  return (
-    <>
-      <input type="text" value={props.description}></input>
-      <input type="text" value={props.deadline}></input>
-      <br></br>
-    </>
-  );
-};
 const tasks = [
   {
     description: "Get out of bed",
@@ -25,15 +16,45 @@ const tasks = [
     deadline: " Thu Sep 14 2017",
   },
 ];
+
+const TodoItems = props => {
+  return (
+    <li>
+      <h3>
+        {props.description}, {props.deadline}
+      </h3>
+    </li>
+  );
+};
+const TodoList = () => {
+  return (
+    <ul>
+      {tasks.map(task => {
+        return (
+          <TodoItems description={task.description} deadline={task.deadline} />
+        );
+      })}
+    </ul>
+  );
+};
+
+const TodoHeader = () => {
+  return <h1>My Todo List</h1>;
+};
+
+const TodoBody = () => {
+  return (
+    <div>
+      <TodoHeader />
+      <TodoList />
+    </div>
+  );
+};
+
 function App() {
   return (
     <div className="App">
-      {<h1>My Todo List</h1>}
-      {tasks.map(task => {
-        return (
-          <TodoList description={task.description} deadline={task.deadline} />
-        );
-      })}
+      <TodoBody />
     </div>
   );
 }
