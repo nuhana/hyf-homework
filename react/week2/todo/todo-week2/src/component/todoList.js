@@ -39,7 +39,6 @@ const todos = [
 const TodoList = ({ todo, setTodo }) => {
   const addTodo = () => {
     const getRandomTodo = todos[Math.floor(Math.random() * todos.length)];
-    //if(randomIndex!==)
     console.log(getRandomTodo);
     setTodo([
       ...todo,
@@ -49,11 +48,6 @@ const TodoList = ({ todo, setTodo }) => {
         completed: false,
       },
     ]);
-    // let lastTodoId = 0;
-    // if (getRandomTodo != lastTodoId) {
-    //   let random = s[getRandomTodo];
-    //   lastNumber = getRandomNumber;
-    // }
   };
   const handleClick = () => {
     addTodo();
