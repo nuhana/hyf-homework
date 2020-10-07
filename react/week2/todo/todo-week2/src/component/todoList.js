@@ -38,8 +38,14 @@ const todos = [
 
 const TodoList = ({ todo, setTodo }) => {
   const addTodo = () => {
-    const getRandomTodo = todos[Math.floor(Math.random() * todos.length)];
-    console.log(getRandomTodo);
+    const currentIds = todo.map(item => item.id);
+    const unUsedTodos = todos.filter(t => !currentIds.includes(t.id));
+    console.log("unused todos ", unUsedTodos);
+    const getRandomTodo =
+      unUsedTodos[Math.floor(Math.random() * unUsedTodos.length)];
+    if (!getRandomTodo) {
+      return;
+    }
     setTodo([
       ...todo,
       {
