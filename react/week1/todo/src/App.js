@@ -17,7 +17,7 @@ const tasks = [
   },
 ];
 
-const TodoItems = props => {
+const TodoItem = props => {
   return (
     <li>
       <h3>
@@ -31,7 +31,7 @@ const TodoList = () => {
     <ul>
       {tasks.map(task => {
         return (
-          <TodoItems description={task.description} deadline={task.deadline} />
+          <TodoItem description={task.description} deadline={task.deadline} />
         );
       })}
     </ul>
@@ -42,19 +42,11 @@ const TodoHeader = () => {
   return <h1>My Todo List</h1>;
 };
 
-const TodoBody = () => {
-  return (
-    <div>
-      <TodoHeader />
-      <TodoList />
-    </div>
-  );
-};
-
 function App() {
   return (
     <div className="App">
-      <TodoBody />
+      <TodoHeader />
+      <TodoList />
     </div>
   );
 }
