@@ -7,10 +7,10 @@ import 'react-nice-dates/build/style.css'
 const TodoList = ({ todo, setTodo, input, setInput }) => {
   
   const [date, setDate] = useState(new Date())
-  var day = date.getDate();
-  var month = date.getMonth();
-  var year = date.getFullYear();
-  var string = day + '-' + month + '-' + year;
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
+  let string = day + '-' + month + '-' + year;
 
   useEffect(()=>{
   fetch(
@@ -41,7 +41,7 @@ const TodoList = ({ todo, setTodo, input, setInput }) => {
         completed: false,
       },
     ]);
-    
+    setInput('')
   };
 
   const deleteTodo = removeTodo => {
@@ -72,6 +72,7 @@ return (
       <div className="add-container">
          <form onSubmit={handleSubmit}>
           <input
+          value={input}
             type="text"
            placeholder='Todo description'
             onChange={handleChange} 

@@ -46,7 +46,7 @@ if(onEdit){
   return (
     <div className="todo">
       <li className= {`todo-item ${todo.completed? 'complete':''}`}>
-      {editValue} ON {string}
+      {editValue} | {string}
       </li>
 <button onClick={() => handleCompleted(todo)}
         className="complete-btn"
