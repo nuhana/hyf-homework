@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+}
+
+nav {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 2px,
+    rgba(0, 0, 0, 0.16) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 8px 8px;
+
+  width: 70%;
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10rem;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: pink;
+}
+.nav-links {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 30px;
+}
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: larger;
+  color: black;
+}
+.fa-github {
+  font-size: 60px;
+}
+
+.search {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 2px,
+    rgba(0, 0, 0, 0.16) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 8px 8px;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+}
+#search-user-name {
+  padding-bottom: 30px;
+  margin-left: 20px;
+}
+#search-user-image {
+  height: 50px;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+#github-icon {
+  height: 10rem;
+  margin-top: 20px;
+}
+
+.text {
+  margin-top: 10px;
+}
+.container {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 2px,
+    rgba(0, 0, 0, 0.16) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 8px 8px;
+  height: 25rem;
+  width: 50%;
+  border-color: pink;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-left: 20rem;
+  margin-top: 10px;
+  font-style: italic;
+  color: rgb(236, 132, 150);
+}
+.container .card {
+  position: relative;
+  background: #fff;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+}
+
+.container .card ul {
+  margin-left: 80px;
+  list-style: none;
+}
+
+.user-avatar {
+  border-radius: 40px;
+  height: 20rem;
+}
+
+footer {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 2px,
+    rgba(0, 0, 0, 0.16) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 8px 8px;
+  height: 25px;
+  width: 15rem;
+  text-align: center;
+  background: pink;
+  padding: 20px;
+  margin-left: 33rem;
+  margin-top: 50px;
+}
+
+.about-section {
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px, rgba(0, 0, 0, 0.12) 0px 2px 2px,
+    rgba(0, 0, 0, 0.16) 0px 4px 4px, rgba(0, 0, 0, 0.2) 0px 8px 8px;
+  height: 25rem;
+  width: 50%;
+  text-align: center;
+  padding: 20px;
+  margin-left: 20rem;
+  margin-top: 20px;
+  font-style: italic;
+}
+.about-list {
+  margin-top: 5rem;
+}
+.about-list {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    margin-left: 5rem;
+  }
+  .container {
+    margin-left: 5rem;
+    flex-direction: column;
+    width: 60%;
+  }
+  .container .card {
+    flex-direction: column;
+  }
+  .container .card ul {
+    margin-left: 0px;
+    width: 100px;
+    padding: 0px;
+  }
+  .user-avatar {
+    border-radius: 40px;
+    height: 5rem;
+    max-width: 100%;
+  }
+  .about-section {
+    margin-left: 5rem;
+    flex-direction: column;
+    width: 60%;
+    height: 35rem;
+  }
+}
