@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Indian food in the summer",
+    "maxNumberOfGuests": 100,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/12/7 14:34",
+    "price": 100
+  },
+  {
+    "id": 2,
+    "title": "Iraqi food in the summer",
+    "maxNumberOfGuests": 20,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2018/12/10 14:34",
+    "price": 67
+  },
+  {
+    "id": 3,
+    "title": "Rød grød med fløde",
+    "maxNumberOfGuests": 50,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/05/10 14:34",
+    "price": 55
+  },
+  {
+    "id": 3,
+    "title": "Rød grød med fløde",
+    "maxNumberOfGuests": 50,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/05/10 14:34",
+    "price": 55
+  },
+  {
+    "id": 3,
+    "title": "Rød grød med fløde",
+    "maxNumberOfGuests": 50,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/05/10 14:34",
+    "price": 55
+  }
+]
