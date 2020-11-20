@@ -6,24 +6,24 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const url = `https://api.github.com/search/users?q=${query}`;
+  const usersSearchUrl = `https://api.github.com/search/users?q=${query}`;
   useEffect(() => {
     if (query === "") {
       return;
     }
     setIsLoading(true);
-    fetch(url)
+    fetch(usersSearchUrl)
       .then(res => res.json())
-      .then(data => {
-        if (data.message) {
-          setError(data.message);
+      .then(usersData => {
+        if (usersData.message) {
+          setError(usersData.message);
         } else {
-          setUsers(data.items);
+          setUsers(usersData.items);
           setError(null);
         }
         setIsLoading(false);
       });
-  }, [url, query]);
+  }, [usersSearchUrl, query]);
   return (
     <div>
       {error ? <h1>{error}</h1> : ""}
